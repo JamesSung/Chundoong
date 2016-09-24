@@ -1,0 +1,25 @@
+<!-- To use predefined query will increase performance -->
+<query-mapping>
+	<query id="productWithAllChild" class='com.chundoong.Product'>
+		<!-- In parameter object could be java.util.Map has key 'pk.id' or 
+		     any Object has a field named 'pk' witch is a value object has a field named 'id'-->
+		<![CDATA[
+			select:{
+				{cd_prodtb:{id = ?::${pk.id}&#id:character}},
+				{cd_itemtb:{fk_id = ?::${pk.id}&#fk_id:character}},
+				{cd_itemconttb:{fk_id = ?::${pk.id}&#fk_id:character}}
+			}
+		]]>	
+	</query>
+	<query id="productWithAllChild2" class='com.chundoong.Product'>
+		<!-- In parameter object could be java.util.Map has key 'pk.id' or 
+		     any Object has a field named 'pk' witch is a value object has a field named 'id'-->
+		<![CDATA[
+			select:{
+				{cd_prodtb:{id = ?::${pk.id}&#id:character}},
+				{cd_itemtb:{fk_id = ?::${pk.id}&#fk_id:character}},
+				{cd_itemconttb:{fk_id = ?::${pk.id}&#fk_id:character}}
+			}
+		]]>	
+	</query>
+</query-mapping>

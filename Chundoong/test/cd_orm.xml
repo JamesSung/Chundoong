@@ -1,0 +1,30 @@
+<or-mapping>
+	<class name="com.chundoong.Product" table="cd_prodtb">
+	   <property name="pk.id" column="id" sql-type="character(5)" isPk="y"/>
+	   <property name="name" column="name" sql-type="varchar(10)" null-value="" />
+	   <property name="amount" column="amt_integer" sql-type="integer" null-value="0" />
+	   <property name="amount" column="amt_double" sql-type="double" null-value="0" />
+	   <property name="amount" column="amt_decimal" sql-type="decimal(10,2)" null-value="0.00" />
+	   <property name="regDate" column="reg_date" sql-type="date" />
+	   <property name="regTime" column="reg_time" sql-type="time" />
+	   <property name="regTimeStamp" column="reg_timestamp" sql-type="timestamp" />
+	   <property name="items" ref-class-name="com.chundoong.Item"/>
+	</class>
+	<!-- fk attribute is used for finding a object include child Objects.
+	     for example, when you find a Product object by id is "0001" with include childs option
+	     , then Item objects have value of fk_id is "0001" are found.  
+	     So even fk_id is not defined as foreign key on cd_itemtb table in the DB,
+	     if logically it is foreign key "fk" attribute must be added with value of "true".-->
+	<class name="com.chundoong.Item" table="cd_itemtb">
+	   <property name="pk.id" column="fk_id" sql-type="character(5)" isPk="y" fk="cd_prodtb.id"/><!-- warning : the fk class definition must be in the same xml file  -->
+	   <property name="pk.itemCode" column="item_code" sql-type="character(5)" pk="y" />
+	   <property name="value" column="item_value" sql-type="varchar(50)" null-value="" />
+	   <property name="itemContents" ref-class-name="com.chundoong.ItemContants"/>
+	</class>
+	<class name="com.chundoong.ItemContants" table="cd_itemconttb">
+	   <property name="pk.id" column="fk_id" sql-type="character(5)" fk="cd_itemtb.fk_id" isPk="y"/>
+	   <property name="pk.itemCode" column="fk_item_code" sql-type="character(5)" fk="cd_itemtb.item_code" pk="y"/>
+	   <property name="pk.seqNum" column="seq_num" sql-type="character(5)" pk="y"/>
+	   <property name="contents" column="contents" sql-type="varchar(100)" />
+	</class>
+</or-mapping>
