@@ -11,12 +11,12 @@ You can also make your own OR Mapping tool with Chundoong easily. <br/>
 
 You might need to add some open source libraries to build path. <br/>
 
-1 /xstream-1.4.9.jar  <br/>
-2 /commons-lang-2.6.jar  <br/>
-3 /commons-logging-1.2.jar  <br/>
-4 /xmlpull-1.1.3.1.jar  <br/>
+1. /xstream-1.4.9.jar  <br/>
+2. /commons-lang-2.6.jar  <br/>
+3. /commons-logging-1.2.jar  <br/>
+4. /xmlpull-1.1.3.1.jar  <br/>
 
-I implemented this project to proof of my concept.
+I implemented this project to proof of my concept. <br/>
 This one works well but needing more works.
 
 
