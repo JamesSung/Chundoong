@@ -16,6 +16,10 @@ You might need to add some open source libraries to build path. <br/>
 3 /commons-logging-1.2.jar  <br/>
 4 /xmlpull-1.1.3.1.jar  <br/>
 
+I implemented this project to proof of my concept.
+This one works well but needing more works.
+
+
 
 
 
