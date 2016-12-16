@@ -17,7 +17,7 @@ You might need to add some open source libraries to build path. <br/>
 4. /xmlpull-1.1.3.1.jar  <br/>
 
 I implemented this project to proof of my concept. <br/>
-This one works well but needing more works.
+
 
 
 
