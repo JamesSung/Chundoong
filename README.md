@@ -4,8 +4,8 @@ Chundoong - Object Relational Mapping Tool (JAVA Project) <br/>
 When we need to read datas from many tables, we should send many SQLs to DBMS to get results. <br/>
 JDBC comunicates to DBMS per each SQL.  <br/>
 Due to DBMS call is RFC(Remote Function Call), it is expencive in terms of performance.  <br/>
-Chundoong invited some procesures to process many requests at one time. <br/>
-So, we can get datas from many tables by one DBMS call. <br/>
+Chundoong invited some procesures to process many requests at a time. <br/>
+So, we can get datas from multiful tables by one DBMS call. <br/>
 
 You can also make your own OR Mapping tool with Chundoong easily. <br/>
 
